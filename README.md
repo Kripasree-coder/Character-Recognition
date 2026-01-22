@@ -1,27 +1,105 @@
-**Handwritten Digit Recognition using SVC**
-This project demonstrates a Handwritten Digit Recognition system using a Support Vector Classifier (SVC). 
-The model has achieved an impressive accuracy of 99.11% on the test dataset. 
-The digits are classified using the digits dataset, which is inbuilt in the scikit-learn library.
+# Handwritten Digit Recognition Using Support Vector Classifier (SVC)
 
-**Overview**
-Handwritten digit recognition is a popular application of machine learning and image classification. In this project, we use a Support Vector Classifier (SVC) to classify digits from 0 to 9. The digits dataset contains 8x8 grayscale images representing handwritten digits.
+## Project Overview
 
-**Dataset**
-The dataset used for this project is the digits dataset provided by the sklearn.datasets module. It contains:
-1,797 samples of 8x8 images of digits.
-Each image is represented as a flattened array of 64 features (pixels).
-The dataset includes the corresponding labels (target values) representing the digit in each image.
+This project demonstrates a handwritten digit recognition system using a Support Vector Classifier (SVC). The objective is to accurately classify handwritten digits from 0 to 9 using image data. The model is trained and evaluated on the inbuilt digits dataset from Scikit-learn and achieves a test accuracy of approximately **99.11%**.
 
-**Model**
-The model used for this task is a Support Vector Classifier (SVC), which is a powerful algorithm for classification tasks. 
-We have used the Radial Basis Function (RBF) kernel in this implementation to achieve high accuracy.
+This project highlights the effectiveness of Support Vector Machines for image classification tasks involving small to medium-sized datasets.
 
-**Steps:**
-**Data Preprocessing:**
-The digits dataset is loaded from sklearn.datasets. The images are flattened into 1D arrays.
-**Train-Test Split:**
-The dataset is split into training and testing sets.
-**Model Training:**
-The SVC model is trained on the training set.
-**Model Evaluation:**
-The model's performance is evaluated on the test set.
+---
+
+## Problem Statement
+
+Given grayscale images of handwritten digits, the goal is to correctly identify the digit represented in each image. This multi-class classification problem is solved using an SVC model with a non-linear kernel.
+
+---
+
+## Dataset Description
+
+The dataset used is the **digits dataset** provided by `sklearn.datasets`.
+
+### Dataset Characteristics
+
+* 1,797 samples of handwritten digits
+* Image size: 8 × 8 pixels (grayscale)
+* Each image represented as a flattened vector of 64 numerical features
+* Target labels: digits from 0 to 9
+
+---
+
+## Tools and Technologies
+
+* Python
+* NumPy
+* Pandas
+* Scikit-learn
+* Matplotlib
+* Seaborn
+
+---
+
+## Model Description
+
+### Algorithm
+
+* Support Vector Classifier (SVC)
+
+### Kernel Used
+
+* Radial Basis Function (RBF)
+
+The RBF kernel enables the model to capture non-linear relationships between pixel values and digit classes, leading to high classification accuracy.
+
+---
+
+## Methodology
+
+### 1. Data Preprocessing
+
+* Loaded the digits dataset from Scikit-learn
+* Flattened 8 × 8 images into 1D feature vectors
+* Normalized and prepared the data for training
+
+### 2. Train-Test Split
+
+* Divided the dataset into training and testing sets to evaluate generalization performance
+
+### 3. Model Training
+
+* Trained the SVC model on the training dataset
+
+### 4. Model Evaluation
+
+* Evaluated performance on the test set
+* Analyzed predictions using accuracy and classification metrics
+
+---
+
+## Results
+
+The trained SVC model achieved an accuracy of approximately **99.11%** on the test dataset, demonstrating excellent performance in handwritten digit classification.
+
+---
+
+## Applications
+
+* Optical character recognition (OCR) systems
+* Automated form and document processing
+* Postal code and bank cheque digit recognition
+* Educational machine learning demonstrations
+
+---
+
+## Conclusion
+
+This project demonstrates how Support Vector Machines can effectively solve image classification problems such as handwritten digit recognition. The high accuracy achieved confirms the suitability of SVC with an RBF kernel for non-linear, multi-class classification tasks.
+
+---
+
+## Future Enhancements
+
+* Hyperparameter tuning using GridSearchCV
+* Confusion matrix and misclassification analysis
+* Comparison with CNNs and other machine learning models
+* Deployment as a real-time digit recognition application
+
